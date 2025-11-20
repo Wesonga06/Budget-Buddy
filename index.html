@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MART: Money Accounting & Resource Tracking</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap">
+    <style>
+        :root {
+            --primary-color: #1abc9c; /* Teal/Mint Green */
+            --dark-color: #2c3e50; /* Dark Blue */
+            --light-color: #ecf0f1; /* Light Gray */
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-color);
+            color: var(--dark-color);
+        }
+        /* --- Navigation Bar --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        nav a {
+            color: var(--dark-color);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 600;
+            padding: 8px 15px; /* Add padding for better hit area */
+            border-radius: 5px;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: var(--primary-color);
+        }
+        .cta-button {
+            background-color: var(--primary-color);
+            color: white !important;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #16a085;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            /* Using a static color for simplicity in a frontend-only context */
+            background-color: var(--dark-color); 
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        /* --- Features Section --- */
+        .features {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .features h2 {
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: var(--dark-color);
+        }
+        .feature-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .feature-item {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            transition: transform 0.3s;
+        }
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+        .feature-item i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        .feature-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--dark-color);
+            color: var(--light-color);
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">MART</div>
+        <div>
+            <a href="#features">Features</a>
+            <a href="login.html">Login</a>
+            <a href="register.html" class="cta-button">Sign Up</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1>Financial Freedom Starts Here.</h1>
+        <p>Your simple, secure tool for budgeting, expense tracking, and achieving financial literacy. Take control of your money today.</p>
+        <a href="register.html" class="cta-button" style="font-size: 1.2rem;">Get Started Now</a>
+    </div>
+
+    <section id="features" class="features">
+        <h2>What We Offer</h2>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <i class="fas fa-chart-line"></i>
+                <h3>Budget Overview</h3>
+                <p>Visualize your spending habits and keep your monthly budget on track.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-credit-card"></i>
+                <h3>Transaction Logging</h3>
+                <p>Easily log and categorize every single transaction in seconds.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-lightbulb"></i>
+                <h3>Financial Tips</h3>
+                <p>Get personalized tips to improve your savings and investment knowledge.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2024 MART (Money Accounting & Resource Tracking). Frontend Demo.
+    </footer>
+
+</body>
+</html>
