@@ -36,7 +36,7 @@
             margin-top: 5px;
             border-radius: 5px;
             border: 1px solid #ccc;
-            margin-bottom: 15px; /* Added spacing */
+            margin-bottom: 15px; 
         }
         button {
             background-color: #4CAF50;
@@ -59,20 +59,16 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const loginForm = document.getElementById('login-form');
-
-            // Validation patterns (kept for client-side field validation hints)
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            // The password pattern is kept here only to ensure the user enters *something* that looks like a strong password.
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             const passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!]).{8,}$/; 
 
             loginForm.addEventListener('submit', function(event) {
-                event.preventDefault(); // Stop default form submission
+                event.preventDefault(); 
                 
                 // Only validate format on the client side
                 if (validateLogin()) {
-                    // Simulate successful authentication and redirection, as required by the assignment
                     alert("Login successful! Simulating redirection to dashboard.");
-                    window.location.href = "dashboard.html"; // Redirect to the static dashboard file
+                    window.location.href = "dashboard.html"; 
                 }
             });
 
@@ -96,7 +92,6 @@
                 const password = document.getElementById('password').value;
                 const errorMessage = document.getElementById('password-error');
 
-                // This validation prevents submission if the field is empty or clearly malformed.
                 if (!passwordPattern.test(password)) {
                     errorMessage.textContent = 'Password format appears incorrect. (Hint: 8+ chars, UC, LC, Digit, Special)';
                     return false;
