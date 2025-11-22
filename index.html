@@ -29,7 +29,8 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         .logo {
-            width: 150px;
+            width: 350px;
+            height: 350px;
             margin: 15px auto;
             color: var(--primary-color);
         }
@@ -55,11 +56,15 @@
         .cta-button:hover {
             background-color: #16a085;
         }
+        .align {
+            text-align: right;
+            margin-bottom: 20px;
+        }
 
         /* --- Hero Section --- */
         .hero {
             /* Using a static color for simplicity in a frontend-only context */
-            background-color: var(--dark-color); 
+            background-color: burlywood; 
             color: white;
             text-align: center;
             padding: 100px 20px;
@@ -115,7 +120,7 @@
         footer {
             text-align: center;
             padding: 20px;
-            background-color: var(--dark-color);
+            background-color: burlywood;
             color: var(--light-color);
             margin-top: 50px;
         }
@@ -123,16 +128,14 @@
 </head>
 <body>
 
-    <nav>
-        <div class="logo"><img src="BB..jpg" alt="Budget Buddy Logo" class="logo"></div>
-        <div>
+    <div class="hero">
+         <div class="align">
             <a href="#features">Features</a>
             <a href="login.html">Login</a>
             <a href="register.html" class="cta-button">Sign Up</a>
         </div>
-    </nav>
-
-    <div class="hero">
+        <div class="logo"><img src="BB..jpg" alt="Budget Buddy Logo" class="logo"></div>
+        
         <h1>Financial Freedom Starts Here.</h1>
         <p>Your simple, secure tool for budgeting, expense tracking, and achieving financial literacy. Take control of your money today.</p>
         <a href="register.html" class="cta-button" style="font-size: 1.2rem;">Get Started Now</a>
@@ -164,4 +167,4 @@
     </footer>
 
 </body>
-</html>
+</html> 
