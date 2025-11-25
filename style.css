@@ -413,13 +413,30 @@ body {
 
 .account-card {
     flex: 1;
-    padding: 20px;
+    padding: 25px 20px; /* Slightly more padding */
     border-radius: var(--border-radius);
     text-align: center;
+    transition: transform 0.3s; /* Adds a hover effect */
+    /* Important: ensures the image stays within the rounded corners */
+    overflow: hidden; 
+    position: relative;
 }
 
-.account-card.mpesa { background-color: #fff0f0; }
-.account-card.bank { background-color: #f0f7ff; }
+.account-card:hover {
+    transform: translateY(-5px); /* Moves up slightly on hover */
+}
+
+.account-card.mpesa {
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1512428559087-560fa5ceab42?auto=format&fit=crop&w=500&q=60');
+    background-size: cover;
+    border-top: 4px solid var(--success); /* Green accent for mobile money */
+}
+
+.account-card.bank {
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=500&q=60');
+    background-size: cover;
+    border-top: 4px solid var(--primary-color); /* Blue accent for bank */
+}
 
 .account-card i {
     font-size: 2rem;
