@@ -180,7 +180,7 @@ body {
     min-height: 100vh;
     background-color: var(--primary-color);
     background-image: linear-gradient(135deg, var(--primary-color) 0%, #3090f4 100%);
-    padding: 20px; /* Prevents edge touching on small screens */
+    padding: 20px; 
 }
 
 .auth-container {
@@ -189,7 +189,7 @@ body {
     border-radius: var(--border-radius);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     width: 100%;
-    max-width: 450px; /* Slightly wider for better spacing */
+    max-width: 450px; 
     text-align: center;
 }
 
@@ -212,14 +212,13 @@ body {
     position: relative;
 }
 
-/* NEW: Flexbox for side-by-side inputs (First/Last Name) */
 .form-group.row {
     display: flex;
     gap: 15px;
 }
 
 .form-group-half {
-    flex: 1; /* Takes equal space */
+    flex: 1; 
     position: relative;
 }
 
@@ -259,7 +258,7 @@ body {
     font-size: 0.8rem;
     margin-top: 5px;
     display: block;
-    min-height: 1.2em; /* Keeps space so layout doesn't jump */
+    min-height: 1.2em; 
 }
 
 .validation-hint {
@@ -341,7 +340,7 @@ body {
 }
 
 .dashboard-header .container {
-    display: flex; /* Changed from Grid to Flex for better control */
+    display: flex; 
     justify-content: space-between;
     align-items: center;
 }
@@ -413,29 +412,28 @@ body {
 
 .account-card {
     flex: 1;
-    padding: 25px 20px; /* Slightly more padding */
+    padding: 25px 20px; 
     border-radius: var(--border-radius);
     text-align: center;
-    transition: transform 0.3s; /* Adds a hover effect */
-    /* Important: ensures the image stays within the rounded corners */
+    transition: transform 0.3s; 
     overflow: hidden; 
     position: relative;
 }
 
 .account-card:hover {
-    transform: translateY(-5px); /* Moves up slightly on hover */
+    transform: translateY(-5px); 
 }
 
 .account-card.mpesa {
     background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1512428559087-560fa5ceab42?auto=format&fit=crop&w=500&q=60');
     background-size: cover;
-    border-top: 4px solid var(--success); /* Green accent for mobile money */
+    border-top: 4px solid var(--success); 
 }
 
 .account-card.bank {
     background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=500&q=60');
     background-size: cover;
-    border-top: 4px solid var(--primary-color); /* Blue accent for bank */
+    border-top: 4px solid var(--primary-color); 
 }
 
 .account-card i {
@@ -543,7 +541,7 @@ body {
 
 .progress-bar {
     height: 8px;
-    width: 200px; /* Fixed width for better visual */
+    width: 200px; 
     background-color: var(--light-bg);
     border-radius: 4px;
     margin-bottom: 5px;
