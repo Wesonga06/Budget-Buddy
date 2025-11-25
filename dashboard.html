@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Budget Buddy - Dashboard</title>
-    <link rel="icon" href="BB.png" type="image/png">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body class="dashboard-page">
@@ -13,93 +13,77 @@
         <div class="container">
             <h1 class="logo">Budget Buddy</h1>
             <nav class="main-nav">
-                <a href="#" class="active">Dashboard</a>
-                <a href="#">Transactions</a>
-                <a href="#">Goals</a>
-                <a href="#">Insights</a>
+                <a href="#" class="active" style="color: var(--primary-color); border-bottom: 2px solid var(--primary-color);">Dashboard</a>
+                <a href="#" style="text-decoration: none; color: #666;">Transactions</a>
+                <a href="#" style="text-decoration: none; color: #666;">Goals</a>
             </nav>
-            <div class="user-info">
-                <span class="user-greeting">Welcome back, **[User's Name Placeholder]**!</span>
-                <i class="fas fa-bell"></i>
+            <div class="user-info" style="display: flex; align-items: center; gap: 15px;">
+                <span>Welcome, <strong>Alex</strong></span>
+                <i class="fas fa-bell" style="cursor: pointer;"></i>
+                <a href="index.html" style="color: var(--error);"><i class="fas fa-sign-out-alt"></i></a>
             </div>
         </div>
     </header>
 
     <main class="dashboard-main container">
         
-        <section class="connected-accounts-section card">
+        <section class="card">
             <div class="card-header">
-                <h3>Connected Accounts</h3>
-                <button class="btn btn-primary btn-small"><i class="fas fa-link"></i> Add Account</button>
+                <h3>My Accounts</h3>
+                <button class="btn btn-primary btn-small"><i class="fas fa-plus"></i> Add</button>
             </div>
             <div class="account-grid">
                 <div class="account-card mpesa">
                     <i class="fas fa-mobile-alt"></i>
-                    <h4>MPESA Account</h4>
-                    <span class="status connected">Connected</span>
+                    <h4>MPESA</h4>
+                    <p>sh. 4,500</p>
+                    <span class="status connected">Active</span>
                 </div>
                 <div class="account-card bank">
                     <i class="fas fa-university"></i>
-                    <h4>Bank Account</h4>
-                    <span class="status connected">Connected</span>
+                    <h4>KCB Bank</h4>
+                    <p>sh. 120,000</p>
+                    <span class="status connected">Active</span>
                 </div>
             </div>
-            
-            <div class="financial-nudge">
-                <i class="fas fa-lightbulb"></i>
-                <div class="nudge-content">
-                    <h4>Financial Nudge</h4>
-                    <p>Your "Food & Dining" spending is 15% over budget this month. Consider cooking at home for the rest of the week!</p>
+
+            <div style="background: #fff9e6; padding: 15px; border-left: 4px solid var(--warning); border-radius: 4px; display: flex; align-items: center; gap: 15px; margin-top: 20px;">
+                <i class="fas fa-lightbulb" style="color: var(--warning); font-size: 1.5rem;"></i>
+                <div>
+                    <h4 style="color: var(--warning); margin-bottom: 2px;">Smart Nudge</h4>
+                    <p style="font-size: 0.9rem; margin: 0;">You've spent 80% of your "Eating Out" budget. Try cooking at home!</p>
                 </div>
             </div>
         </section>
 
-        <section class="spending-insights-section">
-            <div class="card-header">
-                <h3><i class="fas fa-chart-bar"></i> Spending Insights</h3>
-            </div>
-            <div class="insights-grid">
-                <div class="insight-card">
-                    <p>Spending This Month</p>
-                    <p class="insight-value">$785.00</p>
-                </div>
-                <div class="insight-card">
-                    <p>Total Saved (Goals)</p>
-                    <p class="insight-value">$1,200.00</p>
-                </div>
-                <div class="insight-card">
-                    <p>Top Category</p>
-                    <p class="insight-value">Food & Dining</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="goals-section card">
+        <section class="card">
             <div class="card-header">
                 <h3><i class="fas fa-lock"></i> Goal-Locked Savings</h3>
             </div>
-            <div class="goal-list">
-                <div class="goal-item">
-                    <div class="goal-details">
-                        <h4>New Laptop Fund</h4>
-                        <p class="goal-progress">$500 / $1000 - 50%</p>
-                        <div class="progress-bar"><div class="progress" style="width: 50%;"></div></div>
-                        <small>Target: Dec 2025</small>
+            
+            <div class="goal-item" style="display: flex; justify-content: space-between; padding: 15px 0; border-bottom: 1px solid #eee;">
+                <div>
+                    <h4>Emergency Fund</h4>
+                    <div style="width: 200px; height: 8px; background: #eee; border-radius: 4px; margin-top: 5px;">
+                        <div style="width: 45%; height: 100%; background: var(--success); border-radius: 4px;"></div>
                     </div>
-                    <span class="locked-status"><i class="fas fa-lock"></i> Locked</span>
+                    <small>sh. 45,000 / 100,000</small>
                 </div>
-                <div class="goal-item">
-                    <div class="goal-details">
-                        <h4>Emergency Fund</h4>
-                        <p class="goal-progress">$700 / $5000 - 14%</p>
-                        <div class="progress-bar"><div class="progress" style="width: 14%;"></div></div>
-                        <small>Target: Ongoing</small>
-                    </div>
-                    <span class="locked-status"><i class="fas fa-lock"></i> Locked</span>
-                </div>
+                <span style="color: var(--error); font-weight: bold;"><i class="fas fa-lock"></i> Locked</span>
             </div>
-            <button class="btn btn-secondary goal-button"><i class="fas fa-plus"></i> Create New Goal</button>
+
+            <div class="goal-item" style="display: flex; justify-content: space-between; padding: 15px 0;">
+                <div>
+                    <h4>New Laptop</h4>
+                    <div style="width: 200px; height: 8px; background: #eee; border-radius: 4px; margin-top: 5px;">
+                        <div style="width: 75%; height: 100%; background: var(--primary-color); border-radius: 4px;"></div>
+                    </div>
+                    <small>sh. 75,000 / 100,000</small>
+                </div>
+                <span style="color: var(--error); font-weight: bold;"><i class="fas fa-lock"></i> Locked</span>
+            </div>
         </section>
+
     </main>
 </body>
 </html>
