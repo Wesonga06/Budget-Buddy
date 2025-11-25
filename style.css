@@ -331,7 +331,9 @@ body {
 
 /* DASHBOARD STYLES */
 .dashboard-page {
-    background-color: var(--light-bg);
+    background: linear-gradient(rgba(236, 239, 241, 0.9), rgba(236, 239, 241, 0.9)), url('https://www.transparenttextures.com/patterns/cubes.png');
+    background-color: var(--light-bg); 
+    min-height: 100vh;
 }
 
 .dashboard-header {
@@ -381,10 +383,11 @@ body {
 }
 
 .card {
-    background: var(--white);
+    background: var(--card-gradient);
     padding: 25px;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
+    border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .card-header {
@@ -474,11 +477,11 @@ body {
 }
 
 .insight-card {
-    background: var(--white);
-    padding: 20px;
+    background: var(--card-gradient);
+    padding: 25px;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
-    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .insight-card p {
